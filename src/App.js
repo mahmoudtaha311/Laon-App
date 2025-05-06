@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import LoanForm from "./LoanForm";
 
+import { userContext } from "./Contexts/UserContext";
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <userContext.Provider value={{userName:"Mahmoud",email:"test.com",role:"admin"}}>
+      <div className="App" style={{ marginTop: "80px" }}>
+        <LoanForm />
+      </div>
+    </userContext.Provider>
   );
 }
 
