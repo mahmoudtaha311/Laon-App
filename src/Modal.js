@@ -13,6 +13,7 @@ function Modal({ isVisible, errorMessage = null }) {
               : "The Form Has Been Submitted Successfuly"}{" "}
           </h1>
         </div>
+        
       </div>
     );
   } else {
